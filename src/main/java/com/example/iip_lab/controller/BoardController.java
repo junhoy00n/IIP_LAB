@@ -18,6 +18,11 @@ public class BoardController {
     }
 
     @GetMapping("/")
+    public String intro() {
+        return "../static/index.html";
+    }
+
+    @GetMapping("/list")
     public String list(Model model) {
         List<BoardDto> boardDtoList = boardService.getBoardList();
         model.addAttribute("postList", boardDtoList);
@@ -32,6 +37,6 @@ public class BoardController {
     @PostMapping("/post")
     public String write(BoardDto boardDto) {
         boardService.savePost(boardDto);
-        return "redirect:/";
+        return "redirect:/list";
     }
 }
