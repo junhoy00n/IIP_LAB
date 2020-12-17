@@ -11,7 +11,6 @@
     <table class="table">
         <thead class="thead-light">
         <tr class="text-center">
-            <th scope="col">#</th>
             <th scope="col">TITLE</th>
             <th scope="col">WRITER</th>
             <th scope="col">DATE CREATED</th>
@@ -19,9 +18,6 @@
         </thead>
         <tbody>
         <tr class="text-center" th:each="post : ${postList}">
-            <th scope="row">
-                <span th:text="${post.id}"></span>
-            </th>
             <td>
                 <a th:href="@{'/post/' + ${post.id}}">
                     <span th:text="${post.title}"></span>
