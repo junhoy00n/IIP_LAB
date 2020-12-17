@@ -2,7 +2,7 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>게시판 - 목록</title>
+    <title>IIP Lab - Board - List</title>
     <link rel='stylesheet' href='/webjars/bootstrap/4.5.0/css/bootstrap.min.css'>
 </head>
 <body>
@@ -12,9 +12,9 @@
         <thead class="thead-light">
         <tr class="text-center">
             <th scope="col">#</th>
-            <th scope="col">제목</th>
-            <th scope="col">작성자</th>
-            <th scope="col">작성일</th>
+            <th scope="col">TITLE</th>
+            <th scope="col">WRITER</th>
+            <th scope="col">DATE CREATED</th>
         </tr>
         </thead>
         <tbody>
@@ -39,7 +39,7 @@
     <div class="row">
         <div class="col-auto mr-auto"></div>
         <div class="col-auto">
-            <a class="btn btn-primary" th:href="@{/post}" role="button">글쓰기</a>
+            <a class="btn btn-primary" th:href="@{/post}" role="button">WRITING</a>
         </div>
     </div>
 </div>

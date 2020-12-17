@@ -2,7 +2,7 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>게시판 - 글 수정</title>
+    <title>IIP Lab - Board - Modifiy</title>
     <link rel='stylesheet' href='/webjars/bootstrap/4.5.0/css/bootstrap.min.css'>
 </head>
 <body>
@@ -12,19 +12,19 @@
         <input type="hidden" name="_method" value="put"/>
         <input type="hidden" name="id" th:value="${post.id}"/>
         <div class="form-group row">
-            <label for="inputTitle" class="col-sm-2 col-form-label"><strong>제목</strong></label>
+            <label for="inputTitle" class="col-sm-2 col-form-label"><strong>TITLE</strong></label>
             <div class="col-sm-10">
                 <input type="text" name="title" class="form-control" id="inputTitle" th:value="${post.title}">
             </div>
         </div>
         <div class="form-group row">
-            <label for="inputAuthor" class="col-sm-2 col-form-label"><strong>작성자</strong></label>
+            <label for="inputAuthor" class="col-sm-2 col-form-label"><strong>WRITER</strong></label>
             <div class="col-sm-10">
                 <input type="text" name="author" class="form-control" id="inputAuthor" th:value="${post.author}">
             </div>
         </div>
         <div class="form-group row">
-            <label for="inputContent" class="col-sm-2 col-form-label"><strong>내용</strong></label>
+            <label for="inputContent" class="col-sm-2 col-form-label"><strong>CONTENTS</strong></label>
             <div class="col-sm-10">
                 <textarea type="text" name="content" class="form-control" id="inputContent"th:value="${post.content}"></textarea>
             </div>
