@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <title>IIP Lab - Board List</title>
     <link rel='stylesheet' href='/webjars/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
 <header th:insert="common/header.html"></header>
@@ -11,7 +20,6 @@
     <table class="table">
         <thead class="thead-light">
         <tr class="text-center">
-            <th scope="col">#</th>
             <th scope="col">TITLE</th>
             <th scope="col">WRITER</th>
             <th scope="col">DATE</th>
@@ -19,10 +27,7 @@
         </thead>
         <tbody>
         <tr class="text-center" th:each="post : ${postList}">
-            <th scope="row">
-                <span th:text="${post.id}"></span>
-            </th>
-            <td>
+            <td scope="row">
                 <a th:href="@{'/post/' + ${post.id}}">
                     <span th:text="${post.title}"></span>
                 </a>

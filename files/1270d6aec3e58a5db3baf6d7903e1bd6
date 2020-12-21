@@ -1,0 +1,3 @@
+create database board;
+create user 'iip'@'%' identified by 'iip5325';
+grant all on board.* to 'iip'@'%';

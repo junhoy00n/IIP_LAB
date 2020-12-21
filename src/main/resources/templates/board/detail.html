@@ -2,8 +2,17 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title th:text="@{'IIP Lab - Board ' + ${post.title}}"></title>
+    <title>IIP Lab - Board List</title>
     <link rel='stylesheet' href='/webjars/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
 <header th:insert="common/header.html"></header>
@@ -13,6 +22,10 @@
             <h5 class="card-title" th:text="@{${post.title} + ' - ' + ${post.author}}"></h5>
             <p class="card-text"><small class="text-muted" th:text="${#temporals.format(post.createdDate, 'yyyy-MM-dd HH:mm')}"></small></p>
             <p class="card-text" th:text="${post.content}"></p>
+            <div th:if="${post.fileId != null}">
+                <strong>Attached File : </strong>
+                <a class="card-text" th:href="@{'/download/' + ${post.fileId}}" th:text="'File ' + 'Download'"></a>
+            </div>
         </div>
     </div>
     <div class="row mt-3">
