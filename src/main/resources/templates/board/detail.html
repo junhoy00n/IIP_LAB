@@ -21,7 +21,7 @@
             <p class="card-text" th:text="${post.content}"></p>
             <div th:if="${post.fileId != null}">
                 <strong>Attached File : </strong>
-                <a class="card-text" th:href="@{'/download/' + ${post.fileId}}" th:text="'File ' + 'Download'"></a>
+                <a class="card-text" th:href="@{'/download/' + ${post.fileId}}">File Download</a>
             </div>
         </div>
     </div>
