@@ -65,7 +65,7 @@ public class BoardController {
                     e.getStackTrace();
                 }
             }
-            String filePath = savePath + "\\" + filename;
+            String filePath = savePath + "\\" + origFilename;
             files.transferTo(new File(filePath));
 
             FileDto fileDto = new FileDto();
